@@ -106,26 +106,53 @@
 
 // ********************Minimum Price/ lowest price find out of an object***********************
 
-let mobile = [{ name: 'Nokia', price: 20000, color: 'Black', madeIn: 'Finland' },
-    { name: 'Samsung', price: 37000, color: 'White', madeIn: 'Korea' },
-    { name: 'Apple', price: 26000, color: 'Black', madeIn: 'USA' },
-    { name: 'Oppo', price: 16000, color: 'Blue', madeIn: 'China' },
-    { name: 'Vivo', price: 23000, color: 'Black', madeIn: 'China' },
-    { name: 'Xiaomi', price: 43000, color: 'Black', madeIn: 'China' }
-];
+// let mobile = [{ name: 'Nokia', price: 20000, color: 'Black', madeIn: 'Finland' },
+//     { name: 'Samsung', price: 37000, color: 'White', madeIn: 'Korea' },
+//     { name: 'Apple', price: 26000, color: 'Black', madeIn: 'USA' },
+//     { name: 'Oppo', price: 16000, color: 'Blue', madeIn: 'China' },
+//     { name: 'Vivo', price: 23000, color: 'Black', madeIn: 'China' },
+//     { name: 'Xiaomi', price: 43000, color: 'Black', madeIn: 'China' }
+// ];
 
 
-function lowestPrice(mobiles) {
-    // console.log(mobiles);
-    let min = mobiles[0];
-    for (let phone of mobiles) {
-        if (phone < min)
-            min = phone;
-        console.log(phone)
+// function lowestPrice(mobiles) {
+//     // console.log(mobiles);
+//     let min = mobiles[0];
+//     for (let phone of mobiles) {
+//         if (phone < min)
+//             min = phone;
+//         console.log(phone)
+//     }
+//     return min;
+// }
+
+
+// let cheap = lowestPrice(mobile);
+// console.log('Lowest price mobile is =', cheap);
+
+
+
+let shopping = [
+    { name: 'shirt', price: 800, size: 'L' },
+    { name: 'Pant', price: 1200, size: 'L' },
+    { name: 'Oil', price: 200, size: 'L' },
+    { name: 'Medicine', price: 1000 },
+    { name: 'Food', price: 1300 },
+    { name: 'Cap', price: 400 },
+]
+
+function getTotalPrice(shopping) {
+
+    let totalPrice = 0;
+    for (let product of shopping) {
+        // console.log(product);
+        totalPrice = totalPrice + product.price;
     }
-    return min;
+    return totalPrice;
+
 }
 
 
-let cheap = lowestPrice(mobile);
-console.log('Lowest price mobile is =', cheap);
+
+let totalPrice = getTotalPrice(shopping);
+console.log('Todays shopping total price is =', totalPrice);
