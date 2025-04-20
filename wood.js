@@ -34,39 +34,98 @@
 
 
 
+
+
+
+
+
+
+
+
 // *****************Necessary shopping calculation *********************
 
-function shoppingCost(aluQuantity, peyajQuantity, chaalQuantity) {
+// function shoppingCost(aluQuantity, peyajQuantity, chaalQuantity) {
 
-    let aluPrice = 40;
-    let peyajPrice = 80;
-    let chaalPrice = 65;
+//     let aluPrice = 40;
+//     let peyajPrice = 80;
+//     let chaalPrice = 65;
 
-    let aluTotalPrice = aluQuantity * aluPrice;
-    let peyajTotalPrice = peyajQuantity * peyajPrice;
-    let chaalTotalPrice = chaalQuantity * chaalPrice;
+//     let aluTotalPrice = aluQuantity * aluPrice;
+//     let peyajTotalPrice = peyajQuantity * peyajPrice;
+//     let chaalTotalPrice = chaalQuantity * chaalPrice;
 
-    let totalPrice = aluTotalPrice + peyajTotalPrice + chaalTotalPrice;
+//     let totalPrice = aluTotalPrice + peyajTotalPrice + chaalTotalPrice;
 
-    return {
+//     return {
 
-        totalPrice: totalPrice,
-        aluPrice: aluTotalPrice,
-        peyajPrice: peyajTotalPrice,
-        chaalPrice: chaalTotalPrice
+//         totalPrice: totalPrice,
+//         aluPrice: aluTotalPrice,
+//         peyajPrice: peyajTotalPrice,
+//         chaalPrice: chaalTotalPrice
 
+//     }
+
+// }
+
+// let shopping = shoppingCost(5, 2, 10);
+// console.log('Total shopping cost =', shopping.totalPrice);
+
+// // *********************************
+// console.log('Alu Price is =', shopping.aluPrice);
+// // *********************************
+// console.log('Peyaj price is =', shopping.peyajPrice);
+// // *********************************
+// console.log('Chaal price is =', shopping.chaalPrice);
+
+
+
+
+// ********************Minimum number find out of an array********************
+
+// let prices = [20000, 37000, 26000, 16000, 23000, 43000];
+
+// function getMinPrice(numbers) {
+//     let min = numbers[0];
+//     for (let number of numbers) {
+//         if (number < min) {
+//             min = number;
+//         }
+//     }
+//     return min;
+// }
+
+
+// let lowestPrice = getMinPrice(prices);
+// console.log('Most Lowest Mobile price is =', lowestPrice);
+
+
+
+
+
+
+
+// ********************Minimum Price/ lowest price find out of an object***********************
+
+let mobile = [{ name: 'Nokia', price: 20000, color: 'Black', madeIn: 'Finland' },
+    { name: 'Samsung', price: 37000, color: 'White', madeIn: 'Korea' },
+    { name: 'Apple', price: 26000, color: 'Black', madeIn: 'USA' },
+    { name: 'Oppo', price: 16000, color: 'Blue', madeIn: 'China' },
+    { name: 'Vivo', price: 23000, color: 'Black', madeIn: 'China' },
+    { name: 'Xiaomi', price: 43000, color: 'Black', madeIn: 'China' }
+];
+
+
+function lowestPrice(mobiles) {
+    // console.log(mobiles);
+    let min = mobiles[0];
+    for (let phone of mobiles) {
+        if (phone < min)
+            min = phone;
+        console.log(phone)
     }
-
-
+    return min;
 }
 
 
-let shopping = shoppingCost(5, 2, 10);
-console.log('Total shopping cost =', shopping.totalPrice);
-
-// *********************************
-console.log('Alu Price is =', shopping.aluPrice);
-// *********************************
-console.log('Peyaj price is =', shopping.peyajPrice);
-// *********************************
-console.log('Chaal price is =', shopping.chaalPrice);
+let cheap = lowestPrice(mobile);
+console.log('Lowest price mobile is =', cheap);
