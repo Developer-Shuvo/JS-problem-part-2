@@ -152,7 +152,5 @@ function getTotalPrice(shopping) {
 
 }
 
-
-
 let totalPrice = getTotalPrice(shopping);
 console.log('Todays shopping total price is =', totalPrice);
