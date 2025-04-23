@@ -16,14 +16,21 @@
 
 
 // ************************************************
-function createName(slot1, slot2, slot3) {
-    if (typeof slot1 !== 'string' || typeof slot2 !== 'string' || typeof slot3 !== 'string') {
-        return 'Invalid input! Please enter strings';
-    }
-    let nameIs = slot1 + " " + slot2 + " " + slot3;
-    return nameIs;
+// function createName(slot1, slot2, slot3) {
+//     if (typeof slot1 !== 'string' || typeof slot2 !== 'string' || typeof slot3 !== 'string') {
+//         return 'Invalid input! Please enter strings';
+//     }
+//     let nameIs = slot1 + " " + slot2 + " " + slot3;
+//     return nameIs;
+// }
+
+
+// let result = createName('Md. Nazmul', 'Hasan', 'Shuvo');
+// console.log('Your name is =', result);
+
+
+// ************************************************
+
+function numbers(num1, num2) {
+    if (typeof num1 !== )
 }
-
-
-let result = createName('Nazmul', 'Hasan', 'Shuvo');
-console.log('Your name is =', result);
